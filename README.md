@@ -20,9 +20,11 @@ pip install beautifulsoup4
 
 pip install requests
 ```
+
 ### Usage
 
 > python main.py
+
 
 ### Screenshots
 
