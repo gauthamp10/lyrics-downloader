@@ -28,9 +28,9 @@ pip install requests
 
 ###### *📌 Output
 
-![Sample](https://raw.githubusercontent.com/gauthamp10/wikiscrape/master/screenie/sample.png)
+![Sample](https://raw.githubusercontent.com/gauthamp10/lyrics-downloader/master/screenie/sample.png)
 
-![OutputFile](https://raw.githubusercontent.com/gauthamp10/wikiscrape/master/screenie/output.png)
+![OutputFile](https://raw.githubusercontent.com/gauthamp10/lyrics-downloader/master/screenie/output.png)
 
 
 
