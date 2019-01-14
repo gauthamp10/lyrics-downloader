@@ -2,10 +2,12 @@
 
 A simple,fast and effective python tool to fetch lyrics and save it offline.
 
+
 ### Prerequisites
 
 > python3
-
+  
+  
 ### Dependencies
 
 Install the following three python modules before executing wikipedia_info_scraper
@@ -24,6 +26,7 @@ pip install requests
 ### Usage
 
 > python main.py
+
 
 
 ### Screenshots
