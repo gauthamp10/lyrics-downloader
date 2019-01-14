@@ -1,2 +1,2 @@
 # lyrics-downloader
-Python tool to fetch song lyrics and to save it offline
+Python tool to fetch lyrics and to save it offline.
