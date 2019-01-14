@@ -30,7 +30,7 @@ pip install requests
 
 ###### *📌 Output
 
-![Sample](https://raw.githubusercontent.com/gauthamp10/lyrics-downloader/master/Screenie/sample.png)
+![Sample](https://raw.githubusercontent.com/gauthamp10/lyrics-downloader/master/Screenie/sample_out.png)
 
 ![OutputFile](https://raw.githubusercontent.com/gauthamp10/lyrics-downloader/master/Screenie/output.png)
 
