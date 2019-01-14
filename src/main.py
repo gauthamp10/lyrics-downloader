@@ -8,20 +8,17 @@ from bs4 import BeautifulSoup
 sys.setdefaultencoding('utf-8')
 
 
-
 def main():
  lyrics=list()
 
  def print_lines():                                    #printing dotted lines
   print(("-"*68))
 
-
  def screen_clear():                                   #clearing terminal screen
   if os.name == 'nt':
    os.system('cls')
   else:
    os.system('clear')
-
 
  def intro():
   print("\t\t\t\t\t-----Lyrics Downloader------")
@@ -34,7 +31,6 @@ def main():
   result= h + '\n'"|"+msg+"|"'\n' + h
   print(result)
 
-
  def save_file(filename,content):                      #for writing the ouput file. 
   cwd = os.getcwd()
   with open('%s'%filename,'wb') as f:
@@ -43,7 +39,6 @@ def main():
   print_lines()
   print(("Lyrics saved at: "+cwd+"/"+filename))
   print_lines()
-
 
  def find_lyrics_page():                               #for finding lyrics page
   query=raw_input("Enter the song : ").lower()
@@ -65,7 +60,6 @@ def main():
    sys.exit(1)
   return scrape_url
 
-
  def find_lyrics(scrape_url):                          #for finding the lyrics itself
   try:	
    data=requests.get(scrape_url)     
@@ -81,7 +75,6 @@ def main():
     sys.exit(1)
   return(title,lyrics)
 
-
  def display_lyrics(title,lyrics):                     #to display lyrics in terminal
   print((lyrics[1]))
   print_lines()
@@ -90,7 +83,6 @@ def main():
    print_lines()
    save_file((title+".txt"),lyrics)
    print_lines()
-
 
  screen_clear()
  intro()
@@ -109,7 +101,6 @@ def main():
   ch=raw_input("Do you want to save the lyrics?..(y/n): ")
   if ch == 'yes' or ch == 'Yes' or ch == 'y' or ch == 'Y':
   	save_file((title+".txt"),lyrics)
-
 
 if __name__ == '__main__':                                       #Calling main(), the actual entry point for the scraper
     main()  
