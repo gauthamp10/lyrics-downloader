@@ -47,16 +47,16 @@ def main():
    html_page = requests.get("https://www.google.com/search?q="+song+"+lyrics")
    print("\n--------------------------------------------------------")
    print("Sit tight! while we are fetching lyrics for '"+query+"'.........")
-  except:
-   print("\nNetwork Error!!...Please retry!")
+  except Exception as e:
+   print("\nError!:",str(e))
    sys.exit(1)
   try:
    soup = BeautifulSoup(html_page.text,'html.parser')
    links = re.findall("https:\/\/www\.azlyrics\.com\/lyrics\/.+html", str(soup))
    links=str(links)[2:].split('&')
    scrape_url=links[0]
-  except:
-   print("\nNo lyrics found!!..Try again with artist name.")
+  except Exception as e:
+   print("\nError!:",str(e))
    sys.exit(1)
   return scrape_url
 
@@ -70,8 +70,8 @@ def main():
    divs=soup.findAll('div',attrs={'class':None})
    for div in divs:
     lyrics.append(div.text)
-  except:
-    print("No lyrics found!!..")
+  except Exception as e:
+    print("\nNo lyrics found! Error!:",str(e))
     sys.exit(1)
   return(title,lyrics)
 
