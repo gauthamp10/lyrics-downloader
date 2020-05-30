@@ -1,11 +1,8 @@
 import re         
 import os
 import sys
-reload(sys)
-import request
 import requests  
 from bs4 import BeautifulSoup 
-sys.setdefaultencoding('utf-8')
 
 
 def main():
@@ -76,7 +73,7 @@ def main():
   return(title,lyrics)
 
  def display_lyrics(title,lyrics):                     #to display lyrics in terminal
-  print((lyrics[1]))
+  print(lyrics[0])
   print_lines()
   ch=raw_input("Do you want to save the lyrics?..(y/n): ")
   if ch == 'yes' or ch == 'Yes' or ch == 'y' or ch == 'Y':
@@ -92,13 +89,13 @@ def main():
  print("\nFound match: ")
  print((title+"\n"))
  print_lines()
- ch=raw_input("Do you want to display the lyrics?..(y/n): ")
+ ch=input("Do you want to display the lyrics?..(y/n): ")
  if ch == 'yes' or ch == 'Yes' or ch == 'y' or ch == 'Y':
   display_lyrics(title,lyrics)
   print("\n")
  else:
   print_lines() 
-  ch=raw_input("Do you want to save the lyrics?..(y/n): ")
+  ch=input("Do you want to save the lyrics?..(y/n): ")
   if ch == 'yes' or ch == 'Yes' or ch == 'y' or ch == 'Y':
   	save_file((title+".txt"),lyrics)
 
